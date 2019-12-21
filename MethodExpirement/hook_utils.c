@@ -13,7 +13,7 @@
 uint64_t hook_getMillisecond() {
     struct timeval now;
     gettimeofday( &now, NULL );
-    return 1000000*now.tv_sec + now.tv_usec;
+    return (1000000*now.tv_sec + now.tv_usec)/1000;
 }
 
 char *hook_getObjectClassName(id object) {
